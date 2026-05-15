@@ -17,5 +17,5 @@ COPY package*.json ./
 RUN npm install --omit=dev
 COPY --from=build /app/dist ./dist
 
-EXPOSE 8000
+EXPOSE 8080
 CMD ["npm", "start"]

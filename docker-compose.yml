@@ -30,24 +30,24 @@ services:
       DB_USER: dbadmin
       DB_PASSWORD: StrongAdminPass123!
       DB_NAME: backup_db
-      PORT: 8000
-      CORS_ORIGIN: http://localhost:5173
+      PORT: 8080
+      CORS_ORIGIN: http://localhost:9090
       ADMIN_USERNAME: admin
       ADMIN_PASSWORD: admin123
       JWT_SECRET: replace-this-before-production
     ports:
-      - "8000:8000"
+      - "8080:8080"
 
   client:
     build:
       context: ./client
       args:
-        VITE_API_URL: http://localhost:8000
+        VITE_API_URL: http://localhost:8080
     restart: unless-stopped
     depends_on:
       - server
     ports:
-      - "5173:80"
+      - "9090:80"
 
 volumes:
   mysql-data:

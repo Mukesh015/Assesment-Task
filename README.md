@@ -23,7 +23,7 @@ npm install
 npm run dev
 ```
 
-The server runs on `http://localhost:8000`.
+The server runs on `http://localhost:8080`.
 
 `server/.env` is already prepared with the database settings you provided. TypeORM is configured with `synchronize: true` for this coding-test build, so the required tables are created automatically when the server starts.
 
@@ -52,12 +52,12 @@ npm install
 npm run dev
 ```
 
-The client runs on `http://localhost:5173` and talks to the backend through `VITE_API_URL`.
+The client runs on `http://localhost:9090` and talks to the backend through `VITE_API_URL`.
 
 For a custom backend URL, create `client/.env`:
 
 ```text
-VITE_API_URL=http://localhost:8000
+VITE_API_URL=http://localhost:8080
 ```
 
 ## Voting Rules
@@ -79,8 +79,8 @@ docker compose up --build
 
 Services:
 
-- `client`: React app on `http://localhost:5173`
-- `server`: API on `http://localhost:8000`
+- `client`: React app on `http://localhost:9090`
+- `server`: API on `http://localhost:8080`
 - `mysql`: MySQL database on port `3306`
 
 The Docker setup uses the same database name and admin database user declared in the compose file. The server waits for MySQL before connecting through Docker networking.

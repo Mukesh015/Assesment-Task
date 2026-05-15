@@ -16,7 +16,7 @@ import {
 } from 'lucide-react'
 import { io, type Socket } from 'socket.io-client'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8080'
 const SESSION_KEY = 'live-poll-session-id'
 const VOTED_NOMINEE_KEY = 'live-poll-voted-nominee-id'
 const VOTED_POLL_KEY = 'live-poll-voted-poll-id'

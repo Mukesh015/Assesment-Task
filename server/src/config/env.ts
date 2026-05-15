@@ -27,8 +27,8 @@ const numberValue = (key: string, fallback: number) => {
 }
 
 export const env = {
-  port: numberValue('PORT', 8000),
-  corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:5173',
+  port: numberValue('PORT', 8080),
+  corsOrigin: process.env.CORS_ORIGIN || 'http://localhost:9090',
   jwtSecret: process.env.JWT_SECRET || 'replace-this-before-production',
   db: {
     host: required('DB_HOST'),
